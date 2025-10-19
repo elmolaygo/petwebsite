@@ -1,3 +1,10 @@
+document.querySelectorAll('a[href="index.html"]').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.location.href = 'main.html';
+  });
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Pet Adoption Website loaded!');
     
