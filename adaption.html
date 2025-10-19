@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoption Form - FurEver Six</title>
+    <link rel="stylesheet" href="./adaption.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>🐾 FurEver Six</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="main.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pet.html" class="nav-link">Find Pets</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Us</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="form-section">
+        <div class="container">
+            <div class="form-header">
+                <h1>Pet Adoption Application</h1>
+                <div id="pet-info" class="selected-pet">
+                    <h3>Selected Pet: <span id="pet-name">Please select a pet</span></h3>
+                    <p>Breed: <span id="pet-breed">-</span></p>
+                </div>
+            </div>
+
+            <form id="adoption-form" class="adoption-form">
+                <div class="form-section-group">
+                    <h3>Personal Information</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Home Address *</label>
+                        <textarea id="address" name="address" rows="3" required></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section-group">
+                    <h3>Living Situation</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="homeType">Type of Home *</label>
+                            <select id="homeType" name="homeType" required>
+                                <option value="">Select home type</option>
+                                <option value="house">House</option>
+                                <option value="apartment">Apartment</option>
+                                <option value="condo">Condo</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="ownRent">Do you own or rent? *</label>
+                            <select id="ownRent" name="ownRent" required>
+                                <option value="">Select option</option>
+                                <option value="own">Own</option>
+                                <option value="rent">Rent</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="yard">Do you have a yard?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="yard" value="yes"> Yes</label>
+                            <label><input type="radio" name="yard" value="no"> No</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="householdMembers">Number of people in household *</label>
+                        <input type="number" id="householdMembers" name="householdMembers" min="1" required>
+                    </div>
+                </div>
+
+                <div class="form-section-group">
+                    <h3>Pet Experience</h3>
+                    <div class="form-group">
+                        <label for="petExperience">Previous pet ownership experience</label>
+                        <textarea id="petExperience" name="petExperience" rows="4" placeholder="Please describe your experience with pets..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="currentPets">Do you currently have other pets?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="currentPets" value="yes"> Yes</label>
+                            <label><input type="radio" name="currentPets" value="no"> No</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="petCare">Who will be primarily responsible for pet care? *</label>
+                        <input type="text" id="petCare" name="petCare" required>
+                    </div>
+                </div>
+
+                <div class="form-section-group">
+                    <h3>Additional Information</h3>
+                    <div class="form-group">
+                        <label for="reason">Why do you want to adopt this pet? *</label>
+                        <textarea id="reason" name="reason" rows="4" required placeholder="Please tell us why you'd like to adopt this pet..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="timeCommitment">How many hours per day can you dedicate to your pet? *</label>
+                        <select id="timeCommitment" name="timeCommitment" required>
+                            <option value="">Select time commitment</option>
+                            <option value="1-2">1-2 hours</option>
+                            <option value="3-4">3-4 hours</option>
+                            <option value="5-6">5-6 hours</option>
+                            <option value="7+">7+ hours</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="emergencyContact">Emergency Contact Name & Phone *</label>
+                        <input type="text" id="emergencyContact" name="emergencyContact" required placeholder="Name and phone number">
+                    </div>
+                </div>
+
+                <div class="form-section-group">
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" id="agreement" name="agreement" required>
+                            I understand that pet adoption is a lifelong commitment and I am prepared to provide proper care, medical attention, and love to this pet. *
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" onclick="goBack()">Back to Pets</button>
+                    <button type="submit" class="btn-primary">Submit Application</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <h2>🎉 Application Submitted!</h2>
+            <p>Thank you for your interest in adopting <span id="modal-pet-name"></span>!</p>
+            <p>We'll review your application and contact you within 2-3 business days.</p>
+            <button onclick="closeModal()" class="btn-primary">Close</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🐾 FurEver Six</h3>
+                    <p>Connecting loving families with pets in need since 2019.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="main.html">Home</a></li>
+                        <li><a href="pet.html">Find Pets</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📧 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="375e59515877475640445659535f52564543441954585a">[email&#160;protected]</a></p>
+                    <p>📞 (555) 143-6721</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FurEver Six. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+<script src="main.js"></script>
+</body>
+
+</html>
